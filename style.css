@@ -72,23 +72,17 @@ main {
 /*Footer*/
 
 footer {
-  
   height: 349px;
   border-top: 1px solid /*#BCD0E57F*/ red; /*На макете эта линия выходит за границы wrapper, как это сделать?*/
   padding: 70px 0;
-  border: 1px solid red; /*тест чтобы видеть блоки*/
 }
 
 .footer-content {
   height: 209px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red; /*тест чтобы видеть блоки*/
 }
 
-.footer-content div {
-  border: 1px solid red; /*тест чтобы видеть блоки*/
-}
 
 .quicklinks, .legalstuff, .bestdeal {
   display: flex;
@@ -98,13 +92,20 @@ footer {
 }
 
 .footer-content p {
-  font-family: 'Gotham'; /*Не смог подключить шрифт должен быть Gotham*/
+  font-family: 'Arial'; /*Не смог подключить шрифт должен быть Gotham*/
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
   color: #2F281E;
 }
+
+.footer-content ul {
+  height: 149px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
 
 .footer-content li {
   font-family: 'Arial';
