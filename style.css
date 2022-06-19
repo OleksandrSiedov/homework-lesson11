@@ -1,11 +1,13 @@
-.wrapper {
+
+
+/*HEADER*/
+
+.header-wrapper {
+  margin: auto;
   max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
 }
 
-header {
+.header-content {
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -31,6 +33,15 @@ nav {
   display: inline-block;
   margin: 0 10px;
 }
+
+.menu a:hover,
+.menu a:focus {
+  color: #FF9900;
+}
+
+/*.menu a:visited {
+  color: #2F281E;
+}*/
 
 .signIn {
   width: 110px;
@@ -69,16 +80,150 @@ main {
   flex-basis: 20vh; /*Поставил 20vh для примера, чтобы было видно, что footer опускается после main*/
 }
 
+.main-wrapper {
+  margin: auto;
+  max-width: 1200px;
+}
+
+/*First Screen*/
+
+.firstscreen {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstscreen-image {
+  max-width: 644px;
+  max-height: 495px;
+}
+
+.firstscreen-text {
+  max-width: 500px;
+  margin: 97px 0;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  color: #2F281E;
+}
+
+.firstscreen-text p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #544837;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.getStarted {
+  width: 180px;
+  height: 50px;
+  background: #FF9900;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+/*Features*/
+
+.features {
+  margin-top: 99px;
+}
+
+h2 {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.2;
+text-align: center;
+color: #2F281E;
+max-width: 539px;
+margin: 0 auto;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.features-item {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconbackground {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: purple; /*эти цвета мы потом применим через n-th селектор*/
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.iconbackground img {
+  display: block;
+  margin: auto;
+  width: 12px;
+  height: 18px;
+}
+
+.feature-name {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #2F281E;
+  margin-bottom: 16px;
+}
+
+.feature-description {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #544837;
+}
+
+.features>button {
+  display: block;
+  margin: 0 auto 74px;
+}
+
 /*Footer*/
 
-footer {
-  height: 349px;
-  border-top: 1px solid /*#BCD0E57F*/ red; /*На макете эта линия выходит за границы wrapper, как это сделать?*/
+/*.footer {
+  /*height: 349px;
+  border-top: 1px solid red;
+  padding: 70px 0
+}*/
+
+.footer-wrapper {
+  border-top: 1px solid #BCD0E57F;
   padding: 70px 0;
 }
 
 .footer-content {
-  height: 209px;
+  margin: auto;
+  max-width: 1200px;
+  min-height: 209px;
   display: flex;
   justify-content: space-between;
 }
@@ -92,7 +237,7 @@ footer {
 }
 
 .footer-content p {
-  font-family: 'Arial'; /*Не смог подключить шрифт должен быть Gotham*/
+  font-family: 'Gotham'; /*Не смог подключить шрифт должен быть Gotham*/
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
