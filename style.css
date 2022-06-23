@@ -80,7 +80,7 @@ main {
   flex-basis: 20vh; /*Поставил 20vh для примера, чтобы было видно, что footer опускается после main*/
 }
 
-.main-wrapper {
+.hero-wrapper {
   margin: auto;
   max-width: 1200px;
 }
@@ -138,7 +138,17 @@ h1 {
 /*Features*/
 
 .features {
+    height: 510px;
+    background-image: url(img/bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-image: linear-gradient(179.61deg, rgba(255, 229, 210, 0.629261) 0.33%, rgba(255, 244, 229, 0.0001) 99.67%);transform: rotate(180deg);; - обсудить с Мишей, как вставить градиент и растянуть его на "любую" ширину экрана*/
+}
+
+.features-wrapper {
+  margin: 0 auto;
   margin-top: 99px;
+  max-width: 1200px;
 }
 
 h2 {
@@ -170,17 +180,32 @@ margin: 0 auto;
   width: 50px;
   height: 50px;
   border-radius: 15px;
-  background-color: purple; /*эти цвета мы потом применим через n-th селектор*/
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
 
+:nth-child(1 ) > .iconbackground { /*берем элементы класса .iconbackground, которые лежат внутри 1-го ребенка*/
+  background-color: #7752BE;
+}
+
+:nth-child(2) > .iconbackground {
+  background-color: #FAB005;
+}
+
+:nth-child(3) > .iconbackground {
+  background-color: #F03E3D;
+}
+
+:nth-child(4) > .iconbackground {
+  background-color: #4DADF7;
+} 
+
+
+
 .iconbackground img {
   display: block;
   margin: auto;
-  width: 12px;
-  height: 18px;
 }
 
 .feature-name {
@@ -295,4 +320,11 @@ margin: 0 auto;
   font-size: 16px;
   line-height: 1.2;
   color: #FFFFFF;
+}
+
+.features .signUpNow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
